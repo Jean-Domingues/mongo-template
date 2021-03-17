@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modelo</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>
+      <%- titulo %> Forma de acessar variáveis com o ejs
+      
+      <!-- <%= varLocal %> Mostra exatamente a string -->
+      <!-- <%- varLocal %> Converte o HTML dentro da string -->
+    </h1>
+
+    <p>
+      Usando  Javascript
+      <% if(typeof titulo !== 'undefined') { %>
+      <%= varLocal %> 
+      <% } %>
+    </p>
+
+
+    <form action="/" method="post">
+    <label>Cliente</label>
+    <input type="text" name="cliente">
+    <button>Enviar</button>
+    </form>
+  </section>
+
+  <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>
